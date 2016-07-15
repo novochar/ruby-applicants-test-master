@@ -14,17 +14,17 @@
 ActiveRecord::Schema.define(version: 20160226182941) do
 
   create_table "makes", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "webmotors_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "name",         limit: 255
+    t.integer  "webmotors_id", limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "models", force: :cascade do |t|
-    t.integer  "make_id"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "make_id",    limit: 4
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ###new libs###
 gem "execjs"
-gem 'mysql2'
 ###end new libs###
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
