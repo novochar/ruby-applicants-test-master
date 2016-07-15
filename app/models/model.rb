@@ -10,6 +10,4 @@ class Model < ActiveRecord::Base
       end
     Model.create(list)
   end
-  end
-
 end
