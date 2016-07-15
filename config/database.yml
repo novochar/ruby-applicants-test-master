@@ -4,3 +4,10 @@ development:
   database: ruby-applicants-test-master
   username: root
   password: user123
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: ruby-applicants-test-master-t
+  username: root
+  password: user123
