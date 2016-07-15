@@ -8,6 +8,7 @@ class Model < ActiveRecord::Base
           list << {make_id: make.id, name: json["Nome"]}
         end
       end
-    Model.create(list)
+      Model.create(list)
+    end
   end
 end
