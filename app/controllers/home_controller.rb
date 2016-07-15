@@ -10,12 +10,6 @@ class HomeController < ApplicationController
     #debugger
 
     # Itera no resultado e grava as marcas que ainda não estão persistidas
-    json.each do |make_params|
-      Make.transaction do
-        if not Make.exists?(name: make_params["Nome"]) 
-          Make.create(name: make_params["Nome"], webmotors_id: make_params["Id"])
-        end
-      end
-    end
+    Make.create_by_json(json)
   end
 end

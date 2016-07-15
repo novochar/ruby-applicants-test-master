@@ -12,10 +12,7 @@ class ModelsController < ApplicationController
     # debugger
 
     # Itera no resultado e grava os modelos que ainda não estão persistidas
-    models_json.each do |json|
-      if not Model.exists?(name: json["Nome"], make_id: make.id)
-        Model.create!(make_id: make.id, name: json["Nome"])
-      end
-    end
+    
+    Model.create_by_json(models_json, make)
   end
 end
